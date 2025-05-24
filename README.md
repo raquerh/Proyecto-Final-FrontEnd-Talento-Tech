@@ -22,13 +22,13 @@ Se trata de una tienda en línea responsiva para accesorios de motocicletas con 
 
 ### **Capturas de Pantalla**
 - **Página de Inicio**  
-  ![Página de Inicio](https://github.com/user-attachments/assets/placeholder-index.png)
+  ![Página de Inicio](screenshots/index.PNG)
 
 - **Página de Productos**  
-  ![Página de Productos](https://github.com/user-attachments/assets/placeholder-productos.png)
+  ![Página de Productos](screenshots/productos.png)
 
 - **Página de Contacto**  
-  ![Página de Contacto](https://github.com/user-attachments/assets/placeholder-contacto.png)
+  ![Página de Contacto](screenshots/contacto.png)
 
 
 ---
