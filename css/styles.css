@@ -454,6 +454,8 @@ header {
     padding: 0 1rem;
 }
 
+
+
 .contacto h2 {
     font-size: 1.875rem;
     font-weight: bold;
@@ -479,6 +481,13 @@ header {
     align-content: center;
     color: var(--text-light);
     margin: 1rem 6.5rem 1rem 0;
+    background-color: var(--secondary-color-light);
+}
+
+.contacto-grid fieldset legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border:1px solid var(--text-light);
     background-color: var(--secondary-color-light);
 }
 
