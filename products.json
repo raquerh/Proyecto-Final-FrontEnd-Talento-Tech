@@ -1,0 +1,243 @@
+[
+    {
+        "id": "1",
+        "title": "Casco Integral Pro",
+        "description": "Protección avanzada con diseño aerodinámico.",
+        "price": 99.99,
+        "image": "media/img/productos/casco_integral.png",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "2",
+        "title": "Guantes de Cuero",
+        "description": "Comodidad y protección para tus manos.",
+        "price": 39.99,
+        "image": "media/img/productos/guantes_cuero.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "3",
+        "title": "Campera Impermeable",
+        "description": "Ideal para conducir bajo la lluvia.",
+        "price": 89.99,
+        "image": "media/img/productos/campera_impermeable.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "41",
+        "title": "Campera de Cuero Negra",
+        "description": "Estilo clásico con protección reforzada.",
+        "price": 119.99,
+        "image": "media/img/productos/campera_cuero.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "5",
+        "title": "Guantes Térmicos",
+        "description": "Aislamiento para climas fríos.",
+        "price": 44.99,
+        "image": "media/img/productos/guantes_termicos.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "6",
+        "title": "Botas de Montaña",
+        "description": "Resistencia y soporte para terrenos difíciles.",
+        "price": 89.99,
+        "image": "media/img/productos/botas.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "7",
+        "title": "Pantalones Impermeables",
+        "description": "Protección contra agua y viento.",
+        "price": 79.99,
+        "image": "media/img/productos/pantalon.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "8",
+        "title": "Campera Reflectante",
+        "description": "Visibilidad nocturna mejorada.",
+        "price": 99.99,
+        "image": "media/img/productos/campera_ref.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "9",
+        "title": "Guantes de Verano",
+        "description": "Transpirables y ligeros.",
+        "price": 34.99,
+        "image": "media/img/productos/guantes_verano.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "10",
+        "title": "Botas de Carreras",
+        "description": "Diseño aerodinámico con soporte extra.",
+        "price": 109.99,
+        "image": "media/img/productos/botas_carrera.jpg",
+        "category": "Indumentaria"
+    },
+    {
+        "id": "11",
+        "title": "Juego de Cubiertas Off-Road",
+        "description": "Alta tracción para terrenos difíciles.",
+        "price": 149.99,
+        "image": "media/img/productos/cubierta_off_road.jpg",
+        "category": "Repuestos"
+    },
+    {
+        "id": "12",
+        "title": "Aceite Sintético 10W-40",
+        "description": "Lubricante de alto rendimiento para motores.",
+        "price": 29.99,
+        "image": "media/img/productos/aceite_sintetico.jpg",
+        "category": "Repuestos"
+    },
+    {
+        "id": "13",
+        "title": "Filtro de Aire Performance",
+        "description": "Mejora la eficiencia del motor.",
+        "price": 24.99,
+        "image": "media/img/productos/filtro_aire.jpg",
+        "category": "Repuestos"
+    },
+    {
+        "id": "14",
+        "title": "Batería de Gel 12V",
+        "description": "Larga duración y sin mantenimiento.",
+        "price": 79.99,
+        "image": "media/img/productos/bateria.jpg",
+        "category": "Repuestos"
+    },
+    {
+        "id": "15",
+        "title": "Cadena de Transmisión Reforzada",
+        "description": "Resistencia superior para uso intensivo.",
+        "price": 89.99,
+        "image": "https://pixabay.com/photos/motorcycle-chain-drive-1563277/",
+        "category": "Repuestos"
+    },
+    {
+        "id": "16",
+        "title": "Bujía de Alto Rendimiento",
+        "description": "Mejora la ignición y el consumo de combustible.",
+        "price": 19.99,
+        "image": "media/img/productos/bujias.jpg",
+        "category": "Repuestos"
+    },
+    {
+        "id": "17",
+        "title": "Kit de Frenos de Disco",
+        "description": "Frenado eficiente y seguro.",
+        "price": 129.99,
+        "image": "https://pixabay.com/photos/motorcycle-brake-disc-brake-1671100/",
+        "category": "Repuestos"
+    },
+    {
+        "id": "18",
+        "title": "Amortiguador Trasero",
+        "description": "Absorción de impactos mejorada.",
+        "price": 149.99,
+        "image": "https://pixabay.com/photos/shock-absorber-motorcycle-1563288/",
+        "category": "Repuestos"
+    },
+    {
+        "id": "19",
+        "title": "Bomba de Combustible",
+        "description": "Flujo constante para rendimiento óptimo.",
+        "price": 59.99,
+        "image": "https://pixabay.com/photos/fuel-pump-motorcycle-1563289/",
+        "category": "Repuestos"
+    },
+    {
+        "id": "20",
+        "title": "Filtro de Aceite Premium",
+        "description": "Protección avanzada para el motor.",
+        "price": 19.99,
+        "image": "https://pixabay.com/photos/oil-filter-motorcycle-1563290/",
+        "category": "Repuestos"
+    },
+    {
+        "id": "21",
+        "title": "Kit de Herramientas Moto",
+        "description": "Herramientas esenciales para mantenimiento.",
+        "price": 49.99,
+        "image": "media/img/productos/kit_herramientas.jpg",
+        "category": "Accesorios"
+    },
+    {
+        "id": "22",
+        "title": "Candado de Disco",
+        "description": "Seguridad antirrobo para tu moto.",
+        "price": 59.99,
+        "image": "media/img/productos/candado_disco.jpg",
+        "category": "Accesorios"
+    },
+    {
+        "id": "23",
+        "title": "Espejos",
+        "description": "Diseño moderno y ajustable.",
+        "price": 34.99,
+        "image": "media/img/productos/espejos.jpg",
+        "category": "Accesorios"
+    },
+    {
+        "id": "24",
+        "title": "Faro LED Full HD",
+        "description": "Iluminación potente y duradera para cualquier condición.",
+        "price": 69.99,
+        "image": "https://pixabay.com/photos/motorcycle-headlight-light-1563283/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "25",
+        "title": "Manopla Antideslizante",
+        "description": "Comodidad y agarre en todo clima.",
+        "price": 24.99,
+        "image": "https://pixabay.com/photos/grips-motorcycle-handlebar-1563291/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "26",
+        "title": "Parabrisa Deportivo",
+        "description": "Reducción de viento y protección aerodinámica.",
+        "price": 79.99,
+        "image": "https://pixabay.com/photos/windshield-motorcycle-1563292/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "27",
+        "title": "Protector de Motor",
+        "description": "Blindaje para proteger el motor en caídas.",
+        "price": 99.99,
+        "image": "https://pixabay.com/photos/engine-guard-motorcycle-1563293/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "28",
+        "title": "Maleta Lateral Impermeable",
+        "description": "Almacenamiento seguro para viajes largos.",
+        "price": 89.99,
+        "image": "https://pixabay.com/photos/motorcycle-bag-saddlebag-1553304/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "29",
+        "title": "GPS para Motos",
+        "description": "Navegación precisa en rutas desconocidas.",
+        "price": 129.99,
+        "image": "https://www.pexels.com/photo/black-gps-device-on-white-surface-7057338/",
+        "category": "Accesorios"
+    },
+    {
+        "id": "30",
+        "title": "Alarma Antirrobo",
+        "description": "Seguridad avanzada para tu moto.",
+        "price": 49.99,
+        "image": "https://pixabay.com/photos/security-alarm-system-1563284/",
+        "category": "Accesorios"
+    }
+]
+

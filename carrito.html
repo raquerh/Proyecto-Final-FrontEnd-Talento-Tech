@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RRH Motoparts - Tu tienda de confianza para repuestos y accesorios de motocicletas en Argentina.">
-    <meta name="keywords" content="motocicletas, repuestos, accesorios, tienda online">
+    <meta name="description" content="Revisa tu carrito de compras y procede al pago en RRH Motoparts.">
+    <meta name="keywords" content="carrito, compras, motocicletas, repuestos, accesorios">
     <meta name="author" content="RRH Motoparts">
-    <title>Inicio - RRH Motoparts</title>
+    <title>Carrito de Compras - RRH Motoparts</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    
     <img class="fondo" src="media/img/fondo.jpg" alt="fondoDeMotos">
 
     <header>
         <div class="nav-container">
             <div class="logo-container">
                 <img src="media/img/iconSN/logo.png" alt="Logo de RRH Motoparts" class="logo">
-                <h3 class="site-title">RRH Motoparts</h3>
+                <h1 class="site-title">RRH Motoparts</h1>
             </div>
             <nav>
                 <ul class="nav-links">
@@ -27,26 +27,19 @@
                     <li><a href="opiniones.html">Opiniones</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="main">
-        <section class="inicio-container">
-            <h1>Bienvenido a RRH Motoparts</h1>
-            <p>Tu tienda de confianza para repuestos y accesorios de motos e indumentaria</p>
-            <p>Explora nuestra amplia gama de productos y encuentra lo que necesitas para vos y tu moto.</p>
-            <p>¡Estamos aquí para ayudarte a disfrutar de cada kilómetro!</p>
-            <p>Visita nuestra tienda física o compra online y recibe tus productos en la puerta de tu casa.</p>
-            <p>Contamos con un equipo de expertos listos para asesorarte y brindarte el mejor servicio.</p>
-            <p>RRH Motoparts - Donde la calidad y el servicio se encuentran.</p>
-            <iframe class="inicio-video" src="https://www.youtube.com/embed/UMZwQavUN64"
-                title="✅ PARTES de una MOTO y ACCESORIOS, Sus Nombres y Utilidad"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                r eferrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <a href="productos.html" class="btn" id="btn-index" role="button">Ver Productos</a>
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="cart-items"></div>
+            <p class="cart-total">Total: $0.00</p>
+            <a href="productos.html" class="btn continue-shopping">Seguir Comprando</a>
+            <button class="btn clear-cart">Vaciar Carrito</button>
+            <button class="btn checkout-btn">Ir al Pago</button>
         </section>
     </main>
 

@@ -66,7 +66,6 @@ rrh-motoparts/
 │       ├── filtro.jpg           # Imagen de producto (filtro)
 │       ├── espejos.jpg          # Imagen de producto (espejos)
 │       └── bateria.jpg          # Imagen de producto (batería)
-
 ├── screenshots/
 │   ├── index.png                # Captura de la página de inicio
 │   ├── productos.png            # Captura de la página de productos
