@@ -261,19 +261,10 @@ header {
     font-size: small;
 }
 
-.productos-destacados h3 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    text-align: center;
-}
-
 .grid-productos {
     display: grid;
     gap: 2rem;
     justify-content: center;
-}
-
-.productos-destacados .grid-productos {
     grid-template-columns: repeat(4, 1fr); /* 4 productos en línea */
 }
 
@@ -499,6 +490,8 @@ header {
     padding: 10px 25px;
     width: 100%;
     max-width: 500px;
+    color: var(--text-light);
+    background-color: var(--secondary-color-light);
 }
 
 .checkbox {
@@ -678,7 +671,7 @@ textarea:focus {
         max-width: 90vw;
     }
 
-    .productos-destacados .grid-productos {
+    .grid-productos {
         grid-template-columns: repeat(2, 1fr); /* 2 por fila en pantallas pequeñas */
     }
 
