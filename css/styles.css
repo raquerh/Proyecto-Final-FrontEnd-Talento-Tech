@@ -303,7 +303,7 @@ header {
     width: 100%;
     border-radius: 0.25rem;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -453,8 +453,6 @@ header {
     margin: 3rem auto;
     padding: 0 1rem;
 }
-
-
 
 .contacto h2 {
     font-size: 1.875rem;

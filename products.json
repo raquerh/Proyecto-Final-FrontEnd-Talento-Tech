@@ -116,7 +116,7 @@
         "title": "Cadena de Transmisión Reforzada",
         "description": "Resistencia superior para uso intensivo.",
         "price": 89.99,
-        "image": "https://pixabay.com/photos/motorcycle-chain-drive-1563277/",
+        "image": "media/img/productos/cadena.jpg",
         "category": "Repuestos"
     },
     {
@@ -129,10 +129,10 @@
     },
     {
         "id": "17",
-        "title": "Kit de Frenos de Disco",
+        "title": "Kit Completo de Frenos",
         "description": "Frenado eficiente y seguro.",
         "price": 129.99,
-        "image": "https://pixabay.com/photos/motorcycle-brake-disc-brake-1671100/",
+        "image": "media/img/productos/kit_frenos.jpg",
         "category": "Repuestos"
     },
     {
@@ -140,15 +140,15 @@
         "title": "Amortiguador Trasero",
         "description": "Absorción de impactos mejorada.",
         "price": 149.99,
-        "image": "https://pixabay.com/photos/shock-absorber-motorcycle-1563288/",
+        "image": "media/img/productos/amortiguador_trasero.jpg",
         "category": "Repuestos"
     },
     {
         "id": "19",
-        "title": "Bomba de Combustible",
+        "title": "Kit de Bomba de Combustible",
         "description": "Flujo constante para rendimiento óptimo.",
         "price": 59.99,
-        "image": "https://pixabay.com/photos/fuel-pump-motorcycle-1563289/",
+        "image": "media/img/productos/kit_bomba.jpg",
         "category": "Repuestos"
     },
     {
@@ -156,7 +156,7 @@
         "title": "Filtro de Aceite Premium",
         "description": "Protección avanzada para el motor.",
         "price": 19.99,
-        "image": "https://pixabay.com/photos/oil-filter-motorcycle-1563290/",
+        "image": "media/img/productos/filtro_aceite.jpg",
         "category": "Repuestos"
     },
     {
@@ -188,7 +188,7 @@
         "title": "Faro LED Full HD",
         "description": "Iluminación potente y duradera para cualquier condición.",
         "price": 69.99,
-        "image": "https://pixabay.com/photos/motorcycle-headlight-light-1563283/",
+        "image": "media/img/productos/faro_led.jpg",
         "category": "Accesorios"
     },
     {
@@ -196,7 +196,7 @@
         "title": "Manopla Antideslizante",
         "description": "Comodidad y agarre en todo clima.",
         "price": 24.99,
-        "image": "https://pixabay.com/photos/grips-motorcycle-handlebar-1563291/",
+        "image": "media/img/productos/manopla.jpg",
         "category": "Accesorios"
     },
     {
@@ -204,7 +204,7 @@
         "title": "Parabrisa Deportivo",
         "description": "Reducción de viento y protección aerodinámica.",
         "price": 79.99,
-        "image": "https://pixabay.com/photos/windshield-motorcycle-1563292/",
+        "image": "media/img/productos/parabrisas.jpg",
         "category": "Accesorios"
     },
     {
@@ -212,7 +212,7 @@
         "title": "Protector de Motor",
         "description": "Blindaje para proteger el motor en caídas.",
         "price": 99.99,
-        "image": "https://pixabay.com/photos/engine-guard-motorcycle-1563293/",
+        "image": "media/img/productos/protector.jpg",
         "category": "Accesorios"
     },
     {
@@ -220,7 +220,7 @@
         "title": "Maleta Lateral Impermeable",
         "description": "Almacenamiento seguro para viajes largos.",
         "price": 89.99,
-        "image": "https://pixabay.com/photos/motorcycle-bag-saddlebag-1553304/",
+        "image": "media/img/productos/maletamoto.jpg",
         "category": "Accesorios"
     },
     {
@@ -228,7 +228,7 @@
         "title": "GPS para Motos",
         "description": "Navegación precisa en rutas desconocidas.",
         "price": 129.99,
-        "image": "https://www.pexels.com/photo/black-gps-device-on-white-surface-7057338/",
+        "image": "media/img/productos/gps.jpg",
         "category": "Accesorios"
     },
     {
@@ -236,7 +236,7 @@
         "title": "Alarma Antirrobo",
         "description": "Seguridad avanzada para tu moto.",
         "price": 49.99,
-        "image": "https://pixabay.com/photos/security-alarm-system-1563284/",
+        "image": "media/img/productos/alarma.jpg",
         "category": "Accesorios"
     }
 ]

@@ -58,7 +58,7 @@ function displayProducts(productsData, searchTerm = '', selectedCategories = ['a
             const normalizedWord = normalizeText(word);
             const normalizedPlural = normalizedWord.endsWith('s') ? normalizedWord.slice(0, -1) : normalizedWord + 's';
             return (normalizedTitle.includes(normalizedWord) || normalizedTitle.includes(normalizedPlural)) ||
-                   (normalizedDescription.includes(normalizedWord) || normalizedDescription.includes(normalizedPlural));
+                (normalizedDescription.includes(normalizedWord) || normalizedDescription.includes(normalizedPlural));
         });
 
         return matchesSearch && matchesCategory;
@@ -84,7 +84,7 @@ function displayProducts(productsData, searchTerm = '', selectedCategories = ['a
         productElement.innerHTML = `
             <img src="${product.image}" alt="${product.title}">
             <h3>${product.title}</h3>
-            <p>${product.description.substring(0, 100)}...</p>
+            <p>${product.description.substring(0, 100)}</p>
             <p class="precio">$${product.price.toFixed(2)}</p>
             <button class="btn agregar-carrito" data-id="${product.id}" data-title="${product.title}" 
                     data-price="${product.price}" data-image="${product.image}">Añadir al Carrito</button>
@@ -98,7 +98,7 @@ function displayProducts(productsData, searchTerm = '', selectedCategories = ['a
         productElement.innerHTML = `
             <img src="${product.image}" alt="${product.title}">
             <h3>${product.title}</h3>
-            <p>${product.description.substring(0, 100)}...</p>
+            <p>${product.description.substring(0, 100)}</p>
             <p class="precio">$${product.price.toFixed(2)}</p>
             <button class="btn agregar-carrito" data-id="${product.id}" data-title="${product.title}" 
                     data-price="${product.price}" data-image="${product.image}">Añadir al Carrito</button>
@@ -111,7 +111,7 @@ function displayProducts(productsData, searchTerm = '', selectedCategories = ['a
 function displayCart() {
     const existingModal = document.querySelector('.modal-carrito');
     if (existingModal) existingModal.remove();
-    
+
     const cartModal = document.createElement('div');
     cartModal.className = 'modal-carrito';
     cartModal.innerHTML = `
@@ -182,7 +182,7 @@ function displayCartPage() {
 function updateCartCounter() {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     const cartCount = document.querySelector('.cart-count');
-    if (cartCount) cartCount.textContent = totalItems;
+    if (cartCount) cartCount.textContent = totalItems || 0; // Asegura que sea 0 si no hay ítems
 }
 
 // Añade un producto al carrito
@@ -202,23 +202,23 @@ function addToCart(product) {
 function validateForm() {
     const form = document.querySelector('.formulario');
     if (!form) return;
-    
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const name = form.querySelector('input[name="name"]').value;
         const email = form.querySelector('input[name="email"]').value;
         const message = form.querySelector('textarea[name="message"]').value;
-        
+
         if (!name || !email || !message) {
             alert('Por favor, complete todos los campos requeridos.');
             return;
         }
-        
+
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             alert('Por favor, ingrese un correo electrónico válido.');
             return;
         }
-        
+
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
@@ -226,18 +226,18 @@ function validateForm() {
                 'Accept': 'application/json'
             }
         })
-        .then(response => {
-            if (response.ok) {
-                alert('Mensaje enviado con éxito!');
-                form.reset();
-            } else {
+            .then(response => {
+                if (response.ok) {
+                    alert('Mensaje enviado con éxito!');
+                    form.reset();
+                } else {
+                    alert('Error al enviar el mensaje. Por favor, intenta de nuevo.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
                 alert('Error al enviar el mensaje. Por favor, intenta de nuevo.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error al enviar el mensaje. Por favor, intenta de nuevo.');
-        });
+            });
     });
 }
 
@@ -279,10 +279,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     updateCartCounter();
     validateForm();
     handleCheckout();
-    
+
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
-    
+
     if (searchInput && searchButton) {
         // Evento para el botón de búsqueda
         searchButton.addEventListener('click', () => {
@@ -302,7 +302,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     }
-    
+
+    // Evento para redirigir al carrito al hacer clic en el ícono
+    const cartIcon = document.querySelector('.contador-carrito');
+    if (cartIcon) {
+        cartIcon.addEventListener('click', () => {
+            window.location.href = 'carrito.html';
+        });
+    }
+
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('agregar-carrito')) {
             const product = {
@@ -319,7 +327,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (e.target.classList.contains('vaciar-carrito')) {
             cart = [];
             localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartCounter();
+            updateCartCounter(); // Asegura que el contador se actualice al vaciar
             displayCart();
             displayCartPage();
         }
@@ -335,7 +343,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.location.href = 'carrito.html';
         }
     });
-    
+
     document.addEventListener('change', (e) => {
         if (e.target.classList.contains('input-cantidad')) {
             const id = e.target.dataset.id;
