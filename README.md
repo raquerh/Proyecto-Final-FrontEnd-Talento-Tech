@@ -25,13 +25,13 @@
 
 ### **Capturas de Pantalla**
 - **Página de Inicio**  
-  ![Página de Inicio](screenshots/index.PNG)
+  ![Página de Inicio](media/screenshots/index.PNGscreenshots/index.PNG)
 
 - **Página de Productos**  
-  ![Página de Productos](screenshots/productos.png)
+  ![Página de Productos](media/screenshots/productos.png)
 
 - **Página de Contacto**  
-  ![Página de Contacto](screenshots/contacto.png)
+  ![Página de Contacto](media/screenshots/contacto.png)
 
 ---
 
