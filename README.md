@@ -59,12 +59,12 @@ rrh-motoparts/
 │   │   │   ├── instagram.png    # Ícono de Instagram
 │   │   │   ├── twitter.png      # Ícono de Twitter
 │   │   │   └── tik-tok.png      # Ícono de TikTok
-│   │   ├── productos/           # Imagenes de productos
+│   │   ├── productos/           # Imágenes de productos
 │   │   └── fondo.jpg            # Imagen de fondo
-│   └── screenshots/
-│       ├── index.png            # Captura de la página de inicio
-│       ├── productos.png        # Captura de la página de productos
-│       └── contacto.png         # Captura de la página de contacto
+├── screenshots/
+│   ├── index.png                # Captura de la página de inicio
+│   ├── productos.png            # Captura de la página de productos
+│   ├── contacto.png             # Captura de la página de contacto
 ├── products.json                # Datos de productos en formato JSON
 ├── index.html                   # Página principal
 ├── productos.html               # Catálogo de productos
