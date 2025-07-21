@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
-<body>
-<img class="fondo" src="media/img/fondo.jpg" alt="fondoDeMotos">
 
+<body>
     <header>
         <div class="nav-container">
             <div class="logo-container">
@@ -31,23 +31,24 @@
     <main class="main">
         <section class="productos">
             <h2>Nuestros Productos</h2>
-            <p>Descubre nuestra amplia gama de repuestos y accesorios para motocicletas e indumentaria. Desde cascos, y guantes hasta herramientas, tenemos todo lo que necesitas para tu moto.</p>
+            <p>Descubre nuestra amplia gama de repuestos y accesorios para motocicletas e indumentaria. Desde cascos, y
+                guantes hasta herramientas, tenemos todo lo que necesitas para tu moto.</p>
 
-            <div class="filtros">
-                <input type="text" id="searchInput" placeholder="Buscar productos...">
-                <button id="searchButton" class="btn">Buscar</button>
-                <div id="searchMessage" class="search-message">
-                </div> <!-- Aviso de búsqueda -->
-            </div>
-
-            <div class="filtro-container">
-                <h3>Filtrar por Categoría</h3>
-                <select class="filtro-select">
-                    <option value="all">Todos</option>
-                    <option value="Repuestos">Repuestos</option>
-                    <option value="Accesorios">Accesorios</option>
-                    <option value="Indumentaria">Indumentaria</option>
-                </select>
+            <div class="busqueda">
+                <div class="busqueda-linea">
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                    <button id="searchButton" class="btn">Buscar</button>
+                    <div class="filtro">
+                        <h3>Filtrar por Categoría</h3>
+                        <select class="filtro-select">
+                            <option value="all">Todos</option>
+                            <option value="Repuestos">Repuestos</option>
+                            <option value="Accesorios">Accesorios</option>
+                            <option value="Indumentaria">Indumentaria</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="searchMessage" class="search-message"></div>
             </div>
 
             <div class="todos-productos">
@@ -56,7 +57,7 @@
         </section>
     </main>
 
- <footer>
+    <footer>
         <div class="footer-redes">
             <a href="#"><img src="media/img/iconSN/facebook.png" alt="Facebook"></a>
             <a href="#"><img src="media/img/iconSN/x_twitter.png" alt="Twitter"></a>
@@ -67,4 +68,5 @@
     </footer>
     <script src="app.js"></script>
 </body>
+
 </html>

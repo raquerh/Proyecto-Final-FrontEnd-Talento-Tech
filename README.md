@@ -1,24 +1,27 @@
-# RRH Motoparts - Proyecto Final del Curso de Front End de Talento Tech 🚀
+# RRH Motoparts - Proyecto Final Integrador de Talento Tech 🚴‍♂️
 
-![HTML5](https://img.shields.io/badge/HTML5-5-orange) ![CSS3](https://img.shields.io/badge/CSS3-3-blue) ![Formspree](https://img.shields.io/badge/Formspree-4.0-green)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) 
+![Formspree](https://img.shields.io/badge/Formspree-4.0-2C3E50?style=flat)
 
-**Este sitio web fue desarrollado como parte del Proyecto Final del Curso de Front End de Talento Tech.**  
-Se trata de una tienda en línea responsiva para accesorios de motocicletas con un diseño moderno y funcional. Incluye páginas para explorar productos, reseñas, información de la empresa y un formulario de contacto integrado con Formspree. El sitio utiliza HTML semántico, CSS responsivo y mejores prácticas de accesibilidad, ideal para usuarios que buscan una experiencia de navegación sencilla y efectiva.
+**RRH Motoparts** es el **Proyecto Final Integrador** del curso de **Front-End** de **Talento Tech**. Esta tienda en línea está diseñada para los amantes de las motocicletas, ofreciendo una experiencia de compra moderna y funcional para repuestos, accesorios e indumentaria. Con un diseño responsivo, funcionalidades dinámicas y accesibilidad optimizada, este proyecto refleja las mejores prácticas de desarrollo web aprendidas en el curso.
 
 ---
 
 ## 🌟 **Características Principales**
 
-| **Característica**              | **Descripción**                                                                 |
-|---------------------------------|---------------------------------------------------------------------------------|
-| 🎨 **Diseño Responsivo**        | Adaptado a dispositivos de escritorio, tabletas y móviles con CSS Grid y Flexbox. |
-| 🌍 **Navegación Intuitiva**     | Barra de navegación con enlaces a Inicio, Productos, Opiniones, Contacto y Sobre Nosotros. |
-| 🛵 **Catálogo de Productos**    | Muestra accesorios de motocicletas con imágenes y descripciones en `productos.html`. |
-| ⭐ **Reseñas de Clientes**       | Presenta testimonios en un diseño de cuadrícula en `opiniones.html`.             |
-| ✉️ **Formulario de Contacto**   | Formulario integrado con Formspree, con selección predeterminada de "Correo Electrónico" y espaciado entre opciones. |
-| 📖 **Sobre Nosotros**           | Sección detallada sobre la empresa en `sobre-nosotros.html`.                     |
-| 🌐 **Enlaces a Redes Sociales** | Pie de página con íconos de Facebook, Instagram, Twitter y TikTok.               |
-| ♿ **Accesibilidad**             | Incluye atributos `alt`, HTML semántico y navegación por teclado.                |
+| **Característica**                  | **Descripción**                                                                 |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| 🎨 **Diseño Responsivo**            | Adaptado a escritorios, tablets y móviles usando CSS Grid, Flexbox y media queries. |
+| 🛒 **Carrito de Compras Dinámico**   | Añade, elimina y actualiza productos con persistencia en localStorage.           |
+| 🔍 **Búsqueda y Filtro**            | Busca productos por palabra clave y filtra por categorías (Repuestos, Accesorios, Indumentaria). |
+| ⭐ **Reseñas de Clientes**           | Muestra testimonios en una cuadrícula en `opiniones.html`.                       |
+| ✉️ **Formulario de Contacto**       | Integrado con Formspree, con validación de campos y opción de contacto preseleccionada. |
+| 📖 **Sobre Nosotros**               | Detalles sobre la historia, valores y equipo en `sobre-nosotros.html`.           |
+| 🌐 **Navegación Intuitiva**         | Barra de navegación con menú desplegable en móviles para fácil acceso.           |
+| ♿ **Accesibilidad**                 | HTML semántico, atributos `alt` y navegación por teclado para mayor inclusión.   |
+| 🔔 **Notificaciones**               | Retroalimentación instantánea al interactuar con el carrito.                     |
 
 ### **Capturas de Pantalla**
 - **Página de Inicio**  
@@ -30,13 +33,13 @@ Se trata de una tienda en línea responsiva para accesorios de motocicletas con 
 - **Página de Contacto**  
   ![Página de Contacto](screenshots/contacto.png)
 
-
 ---
 
 ## 🛠 **Requisitos**
 
 - **Navegador Moderno**: Chrome, Firefox, Edge o Safari (versión actualizada).
-- **Conexión a Internet**: Necesaria para el formulario de Formspree y carga de fuentes externas.
+- **Conexión a Internet**: Necesaria para cargar fuentes de Google Fonts y enviar formularios vía Formspree.
+- **Servidor Local**: Recomendado para pruebas (por ejemplo, Python o Live Server).
 
 ---
 
@@ -45,75 +48,81 @@ Se trata de una tienda en línea responsiva para accesorios de motocicletas con 
 ```
 rrh-motoparts/
 ├── css/
-│   └── styles.css               # Hoja de estilos con diseño responsivo
+│   └── styles.css               # Estilos responsivos con variables CSS
+├── js/
+│   └── app.js                   # Lógica JavaScript para funcionalidades dinámicas
 ├── media/
-│   ├── audio/                   # por el momento no tiene audio
-│   ├── video/                   # por el momento no tiene video
-│   └── img/
-│       ├── logo.png              # Logo de la marca
-│       ├── iconSN/
-│       │   ├── facebook.png      # Ícono de Facebook
-│       │   ├── instagram.png     # Ícono de Instagram
-│       │   ├── twitter.png       # Ícono de Twitter
-│       │   └── tik-tok.png       # Ícono de TikTok
-│       ├── casco.jpg            # Imagen de producto (casco)
-│       ├── cubierta.jpg         # Imagen de producto (cubierta)
-│       ├── herramientas.jpg     # Imagen de producto (herramientas)
-│       ├── guantes.jpg          # Imagen de producto (guantes)
-│       ├── aceite.jpg           # Imagen de producto (aceite)
-│       ├── candado.jpg          # Imagen de producto (candado)
-│       ├── campera.jpg          # Imagen de producto (campera)
-│       ├── filtro.jpg           # Imagen de producto (filtro)
-│       ├── espejos.jpg          # Imagen de producto (espejos)
-│       └── bateria.jpg          # Imagen de producto (batería)
+│   ├── img/
+│   │   ├── iconSN/              # Íconos para navegación y pie de página
+│   │   │   ├── logo.png         # Logo de la marca
+│   │   │   ├── facebook.png     # Ícono de Facebook
+│   │   │   ├── instagram.png    # Ícono de Instagram
+│   │   │   ├── twitter.png      # Ícono de Twitter
+│   │   │   └── tik-tok.png      # Ícono de TikTok
+│   │   ├── productos/           # Imágenes de productos
+│   │   └── fondo.jpg            # Imagen de fondo
 ├── screenshots/
 │   ├── index.png                # Captura de la página de inicio
 │   ├── productos.png            # Captura de la página de productos
-│   └── contacto.png             # Captura de la página de contacto
+│   ├── contacto.png             # Captura de la página de contacto
+├── products.json                # Datos de productos en formato JSON
 ├── index.html                   # Página principal
 ├── productos.html               # Catálogo de productos
+├── carrito.html                 # Carrito de compras
 ├── opiniones.html               # Reseñas de clientes
 ├── contacto.html                # Formulario de contacto
 ├── sobre-nosotros.html          # Información sobre la empresa
-└── README.md                    # Documentación
+└── README.md                    # Documentación del proyecto
 ```
 
 ---
 
-## ▶️ Uso
-1. **Ejecuta el Proyecto**:
-   - Abre `index.html` en un navegador moderno haciendo doble clic o usando un servidor local:
-     - **Con Python**: `python -m http.server 8000` y visita `http://localhost:8000`.
-     - **Con VS Code**: Usa la extensión Live Server y haz clic en "Open with Live Server".
-   - Explora las páginas: Inicio, Productos, Opiniones, Contacto y Sobre Nosotros. 🌟
+## ▶️ **Uso**
 
-2. **Prueba el Formulario de Contacto**:
+1. **Ejecutar el Proyecto**:
+
+  https://raquerh.github.io/Proyecto-Final-FrontEnd-Talento-Tech/
+
+2. **Explorar el Sitio**:
+   - **Inicio**: Descubre RRH Motoparts y accede al catálogo.
+   - **Productos**: Busca, filtra y añade productos al carrito.
+   - **Carrito**: Gestiona tu carrito y simula un pago.
+   - **Opiniones**: Lee reseñas de clientes.
+   - **Contacto**: Envía consultas mediante el formulario.
+   - **Sobre Nosotros**: Conoce la empresa y su ubicación.
+
+3. **Probar el Formulario**:
    - En `contacto.html`, completa los campos (nombre, correo, mensaje).
-   - La opción "Correo Electrónico" está preseleccionada por defecto.
-   - Haz clic en **Enviar** para enviar el formulario. 📧
-
-3. **Comprobacion de Formspree**:
-   - Verifica que llegue a tu correo asociado con Formspree. 🔧
+   - La opción "Correo Electrónico" está preseleccionada.
+   - Haz clic en **Enviar** y verifica la recepción en tu correo asociado con Formspree.
 
 ---
 
-## 🐛 Problemas y Soluciones
+## 🐛 **Problemas y Soluciones**
 
 - **Formulario no Envía**:
-  - Asegúrate de que la direccion en el formulario tiene la ID correcta de Formspree.
-  - Verifica que el sitio esté alojado en HTTPS (despliegue necesario).
-  - Solución: Prueba localmente con un servidor (por ejemplo, Python) y despliega en Netlify.
+  - **Causa**: ID de Formspree incorrecta o falta de HTTPS.
+  - **Solución**: Verifica la acción del formulario en `contacto.html` y usa un servidor local o despliega en Netlify.
 
 - **Imágenes no Cargan**:
-  - Confirma que las imágenes estén en la carpeta correcta con los nombres correctos.
-  - Solución: Actualiza las rutas en los archivos HTML si las moviste.
+  - **Causa**: Rutas incorrectas o archivos faltantes.
+  - **Solución**: Asegúrate de que las imágenes estén en `media/img/productos/` y revisa las rutas en `products.json`.
 
 - **Diseño Desajustado en Móviles**:
-  - Asegúrate de que el navegador no esté en modo de compatibilidad.
-  - Solución: Limpia la caché del navegador o prueba en otro dispositivo.
+  - **Causa**: Caché del navegador o modo de compatibilidad.
+  - **Solución**: Limpia la caché o prueba en otro dispositivo.
+
+- **Productos no se Muestran**:
+  - **Causa**: Error en la carga de `products.json`.
+  - **Solución**: Asegúrate de usar un servidor local para la solicitud `fetch`.
 
 ---
 
-## 📧 Contacto
-Para preguntas o sugerencias, contacta a raquerh@gmail.com o abre un issue en el repositorio.  
-¡Gracias por tu interés! 🚀
+## 📧 **Contacto**
+
+Para preguntas, sugerencias o feedback:
+- **Correo Electrónico**: raquerh@gmail.com
+- **GitHub Issues**: Abre un issue en el repositorio
+
+
+**¡Gracias por explorar RRH Motoparts!** Este proyecto es un reflejo del aprendizaje y la pasión por el desarrollo Front-End adquiridos en el curso de **Talento Tech**. 🏍️
