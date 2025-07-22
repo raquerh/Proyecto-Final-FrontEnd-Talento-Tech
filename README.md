@@ -1,6 +1,5 @@
 # 🏍️ RRH Motoparts - Proyecto Final Integrador de Talento Tech 🚴‍♂️
 
-![Desarrollo Web](https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif)
 
 **RRH Motoparts** es el **Proyecto Final Integrador** del curso de **Front-End** de **Talento Tech**, ¡y está diseñado para los fanáticos de las motos que viven por la adrenalina! 🛵💨 Esta tienda en línea ofrece repuestos, accesorios e indumentaria para motocicletas con un diseño **moderno**, **funcional** y **lleno de estilo**. Con colores vibrantes, un diseño responsivo y funcionalidades dinámicas, este proyecto es una explosión de pasión por las dos ruedas y las mejores prácticas de desarrollo web. 🛞🔥
 
