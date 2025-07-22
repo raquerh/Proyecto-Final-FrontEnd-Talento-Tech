@@ -1,3 +1,36 @@
+let header = `
+    <div class="nav-container">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="menu-icon"></span>
+        </button>
+        <div class="logo-container">
+            <a href="index.html" class="logo-link">
+                <img src="media/img/iconSN/logo.png" alt="Logo RRH Motoparts" class="logo">
+                <span class="site-title">RRH Motoparts</span>
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="opiniones.html">Opiniones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        </ul>
+    </div>
+`;
+document.getElementById("idheader").innerHTML = header;
+
+let footer = `
+    <div class="footer-redes">
+        <a href="#"><img src="media/img/iconSN/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="media/img/iconSN/x_twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="media/img/iconSN/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="media/img/iconSN/tik-tok.png" alt="Tik-Tok"></a>
+    </div>
+    <p class="footer-info">© 2025 RRH Motoparts. Todos los derechos reservados.</p>
+`;
+document.getElementById("idfooter").innerHTML = footer;
+
 async function cargarProductos() {
     try {
         const response = await fetch('products.json');
@@ -43,7 +76,6 @@ function mostrarProductos(datosProductos, terminoBusqueda = '', categoriasSelecc
         return coincideBusqueda && coincideCategoria;
     });
 
-    // Mostrar mensaje si no hay coincidencias, pero mostrar igual todos los productos
     const mensajeBusqueda = document.getElementById('searchMessage');
     let productosAMostrar = productosFiltrados;
 
@@ -64,7 +96,7 @@ function mostrarProductos(datosProductos, terminoBusqueda = '', categoriasSelecc
         elementoProducto.innerHTML = `
             <img src="${producto.image}" alt="${producto.title}">
             <h3>${producto.title}</h3>
-            <p>${producto.description.substring(0, 100)}...</p>
+            <p>${producto.description.substring(0, 100)}</p>
             <p class="precio">$${producto.price.toFixed(2)}</p>
             <button class="btn agregar-carrito" data-id="${producto.id}" data-title="${producto.title}" 
                     data-price="${producto.price}" data-image="${producto.image}">Añadir al Carrito</button>
@@ -75,6 +107,7 @@ function mostrarProductos(datosProductos, terminoBusqueda = '', categoriasSelecc
 
 function mostrarPaginaCarrito() {
     const contenedorItemsCarrito = document.querySelector('.items-carrito');
+    const opcionPago = document.querySelector('.opcion-pago');
     const totalCarrito = document.querySelector('.total-carrito');
     if (!contenedorItemsCarrito || !totalCarrito) return;
 
@@ -207,13 +240,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     const contadorCarrito = document.createElement('span');
     contadorCarrito.className = 'contador-carrito';
     contadorCarrito.innerHTML = '<img src="media/img/iconSN/carts.png" alt="Carrito de Compras" class="cart-icon"> <span class="cart-count">0</span>';
-    const enlacesNavegacion = document.querySelector('.nav-links');
-    if (enlacesNavegacion) enlacesNavegacion.appendChild(contadorCarrito);
+    const navContainer = document.querySelector('.nav-container');
+    if (navContainer) navContainer.appendChild(contadorCarrito);
 
     const iconoCarrito = document.querySelector('.contador-carrito');
     if (iconoCarrito) {
         iconoCarrito.addEventListener('click', () => {
             window.location.href = 'carrito.html';
+        });
+    }
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
         });
     }
 
@@ -245,7 +295,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
-        // 👉 NUEVO: borrar el mensaje mientras escribe
         entradaBusqueda.addEventListener('input', () => {
             const mensajeBusqueda = document.getElementById('searchMessage');
             if (mensajeBusqueda) {

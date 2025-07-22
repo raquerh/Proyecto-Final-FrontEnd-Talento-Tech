@@ -67,8 +67,8 @@
     font-weight: bold;
     text-align: center;
     padding-top: 0.3rem;
-    min-height: 1.5rem; /* RESERVA espacio fijo */
-    visibility: hidden; /* Oculta pero conserva espacio */
+    min-height: 1.5rem;
+    visibility: hidden;
 }
 
 /* Estilos generales para todo el sitio */
@@ -107,7 +107,7 @@ header {
     z-index: 999;
     background-color: var(--secondary-color);
     color: var(--text-light);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     flex-shrink: 0;
 }
 
@@ -115,14 +115,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 0 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.logo-link:hover,
+.logo-link:focus {
+    color: #d1d5db;
 }
 
 .logo {
@@ -139,6 +156,7 @@ header {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+    flex-grow: 0;
 }
 
 .nav-links li a {
@@ -157,7 +175,7 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    position: relative;
+    flex-grow: 0;
 }
 
 .cart-icon {
@@ -170,6 +188,7 @@ header {
     color: var(--text-light);
     padding: 0.2rem 0.5rem;
     border-radius: 0.25rem;
+    font-size: 0.9rem;
 }
 
 .cart-notification {
@@ -185,6 +204,59 @@ header {
     animation: fadeIn 0.3s ease-in-out;
     white-space: nowrap;
     z-index: 1001;
+}
+
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.menu-icon {
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    top: 8px;
+}
+
+.menu-toggle.active .menu-icon {
+    background: transparent;
+}
+
+.menu-toggle.active .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-toggle.active .menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 /* Todos los botones del sitio */
@@ -420,8 +492,12 @@ header {
 
 /* Animaciones */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Sección de Opiniones */
@@ -653,16 +729,47 @@ textarea:focus {
 
 /* Media Queries para Responsividad */
 @media (max-width: 1024px) {
-    /* Encabezado */
     .nav-container {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 0.5rem;
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    .logo-container {
+        flex: 1;
+        justify-content: center;
+        order: 0;
     }
 
     .nav-links {
-        gap: 1rem;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        z-index: 998;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .contador-carrito {
+        flex: 0 0 auto;
+        order: 1;
     }
 
     .site-title {
@@ -673,14 +780,21 @@ textarea:focus {
         width: 1.75rem;
     }
 
-    /* Notificación del carrito */
+    .cart-icon {
+        width: 1.5rem;
+    }
+
+    .cart-count {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
     .cart-notification {
-        top: 2.25rem;
+        top: 3rem;
         font-size: 0.9375rem;
         padding: 0.6rem 1.2rem;
     }
 
-    /* Botones */
     .btn {
         padding: 0.4rem 0.8rem;
         font-size: 0.9375rem;
@@ -692,7 +806,6 @@ textarea:focus {
         width: 12rem;
     }
 
-    /* Index */
     .inicio-container h1 {
         font-size: 1.75rem;
     }
@@ -702,7 +815,6 @@ textarea:focus {
         max-height: 35vh;
     }
 
-    /* Productos */
     .grid-productos {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -719,7 +831,6 @@ textarea:focus {
         font-size: 1.125rem;
     }
 
-    /* Carrito */
     .carrito h2 {
         font-size: 1.625rem;
     }
@@ -742,7 +853,6 @@ textarea:focus {
         font-size: 1.25rem;
     }
 
-    /* Opiniones */
     .opiniones h2 {
         font-size: 1.625rem;
     }
@@ -755,7 +865,6 @@ textarea:focus {
         font-size: 1.125rem;
     }
 
-    /* Contacto */
     .contacto h2 {
         font-size: 1.625rem;
     }
@@ -778,7 +887,6 @@ textarea:focus {
         font-size: 0.9375rem;
     }
 
-    /* Sobre Nosotros */
     .sobre-nosotros h2 {
         font-size: 1.625rem;
     }
@@ -792,7 +900,6 @@ textarea:focus {
         height: 400px;
     }
 
-    /* Pie de Página */
     .footer-redes img {
         width: 0.875rem;
     }
@@ -803,22 +910,53 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-    /* Encabezado */
     .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.75rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    .logo-container {
+        flex: 1;
+        justify-content: center;
+        order: 0;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        padding: 1rem 0;
-        gap: 0.75rem;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        z-index: 998;
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .contador-carrito {
+        flex: 0 0 auto;
+        order: 1;
     }
 
     .site-title {
@@ -829,15 +967,22 @@ textarea:focus {
         width: 1.5rem;
     }
 
-    /* Notificación del carrito */
+    .cart-icon {
+        width: 1.25rem;
+    }
+
+    .cart-count {
+        padding: 0.15rem 0.4rem;
+        font-size: 0.875rem;
+    }
+
     .cart-notification {
         top: 2.5rem;
-        right: 0;
+        right: 0.5rem;
         font-size: 0.875rem;
         padding: 0.5rem 1rem;
     }
 
-    /* Botones */
     .btn {
         padding: 0.3rem 0.7rem;
         font-size: 0.875rem;
@@ -856,7 +1001,6 @@ textarea:focus {
         max-width: 15rem;
     }
 
-    /* Index */
     .inicio-container {
         padding: 0.75rem;
         max-width: 90vw;
@@ -875,7 +1019,6 @@ textarea:focus {
         max-height: 30vh;
     }
 
-    /* Productos */
     .grid-productos {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -896,7 +1039,6 @@ textarea:focus {
         font-size: 0.875rem;
     }
 
-    /* Carrito */
     .carrito {
         margin: 2rem auto;
     }
@@ -940,7 +1082,6 @@ textarea:focus {
         font-size: 0.875rem;
     }
 
-    /* Opiniones */
     .opiniones {
         margin: 2rem auto;
     }
@@ -969,7 +1110,6 @@ textarea:focus {
         font-size: 1rem;
     }
 
-    /* Contacto */
     .contacto {
         margin: 2rem auto;
     }
@@ -1001,7 +1141,6 @@ textarea:focus {
         font-size: 0.875rem;
     }
 
-    /* Sobre Nosotros */
     .sobre-nosotros {
         margin: 2rem auto;
     }
@@ -1031,7 +1170,6 @@ textarea:focus {
         height: 300px;
     }
 
-    /* Pie de Página */
     .footer-redes img {
         width: 0.75rem;
     }
@@ -1042,9 +1180,52 @@ textarea:focus {
 }
 
 @media (max-width: 480px) {
-    /* Encabezado */
     .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding: 0 0.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex: 0 0 auto;
+    }
+
+    .logo-container {
+        flex: 1;
+        justify-content: center;
+        order: 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem;
+        z-index: 998;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 0.875rem;
+        padding: 0.5rem 0;
+    }
+
+    .contador-carrito {
+        flex: 0 0 auto;
+        order: 1;
     }
 
     .site-title {
@@ -1055,23 +1236,22 @@ textarea:focus {
         width: 1.25rem;
     }
 
-    .nav-links {
-        gap: 0.5rem;
+    .cart-icon {
+        width: 1rem;
     }
 
-    .nav-links li a {
-        font-size: 0.875rem;
+    .cart-count {
+        padding: 0.1rem 0.3rem;
+        font-size: 0.75rem;
     }
 
-    /* Notificación del carrito */
     .cart-notification {
         top: 2rem;
-        right: 0;
+        right: 0.5rem;
         font-size: 0.75rem;
         padding: 0.4rem 0.8rem;
     }
 
-    /* Botones */
     .btn {
         padding: 0.25rem 0.5rem;
         font-size: 0.75rem;
@@ -1083,7 +1263,6 @@ textarea:focus {
         width: 8rem;
     }
 
-    /* Index */
     .inicio-container h1 {
         font-size: 1.25rem;
     }
@@ -1097,7 +1276,6 @@ textarea:focus {
         max-height: 25vh;
     }
 
-    /* Productos */
     .productos h2 {
         font-size: 1.25rem;
     }
@@ -1118,7 +1296,6 @@ textarea:focus {
         font-size: 0.75rem;
     }
 
-    /* Carrito */
     .carrito {
         margin: 1.5rem auto;
         padding: 0 0.5rem;
@@ -1151,7 +1328,6 @@ textarea:focus {
         gap: 0.5rem;
     }
 
-    /* Opiniones */
     .opiniones {
         margin: 1.5rem auto;
         padding: 0 0.5rem;
@@ -1177,7 +1353,6 @@ textarea:focus {
         font-size: 0.875rem;
     }
 
-    /* Contacto */
     .contacto {
         margin: 1.5rem auto;
         padding: 0 0.5rem;
@@ -1210,7 +1385,6 @@ textarea:focus {
         font-size: 0.75rem;
     }
 
-    /* Sobre Nosotros */
     .sobre-nosotros {
         margin: 1.5rem auto;
         padding: 0 0.5rem;
@@ -1236,7 +1410,6 @@ textarea:focus {
         height: 250px;
     }
 
-    /* Pie de Página */
     .footer-redes img {
         width: 0.625rem;
     }
